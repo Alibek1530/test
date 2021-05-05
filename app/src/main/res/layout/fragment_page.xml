@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_fon"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.page.PageFragment">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/error"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/image">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Strashniy Glen"
+                android:textSize="21sp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/online"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:cardCornerRadius="4dp"
+                android:layout_marginLeft="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/onlinee"
+                app:layout_constraintBottom_toBottomOf="@id/onlinee"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/onlinee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintLeft_toRightOf="@id/online"
+                android:text="Strashniy Glen"
+                android:textSize="15sp"
+                android:layout_marginLeft="4dp"
+                android:textStyle="normal"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/numan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintLeft_toRightOf="@id/onlinee"
+                android:text="Human"
+                android:textSize="15sp"
+                android:layout_marginLeft="4dp"
+                android:textStyle="normal"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/item_31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/onlinee"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Last known location:"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="normal"
+                android:textColor="@color/color_item_text"/>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/item_31"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Mechta mastera Goldenfolda"
+                android:textSize="15sp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="normal"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/item_51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/location"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="First seen in:"
+                android:textSize="13sp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="normal"
+                android:textColor="@color/color_item_text"/>
+            <TextView
+                android:id="@+id/location_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/item_51"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:text="Mechta mastera Goldenfolda"
+                android:textSize="15sp"
+                android:layout_marginLeft="8dp"
+                android:textStyle="normal"
+                android:textColor="@color/white"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    <ProgressBar
+        android:id="@+id/progressPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/image"
+        app:layout_constraintRight_toRightOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        android:elevation="2dp"
+        android:indeterminate="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
